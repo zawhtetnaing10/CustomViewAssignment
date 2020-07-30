@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+		android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" >
+
+
+		<RelativeLayout
+			android:id="@+id/rlAppBar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/btnBack"
+				android:src="@drawable/ic_baseline_arrow_back_black_ios_24"
+				android:layout_width="@dimen/margin_large"
+				android:layout_marginTop="@dimen/margin_large"
+				android:layout_marginStart="@dimen/margin_large"
+				android:layout_height="@dimen/margin_large"/>
+
+			<TextView
+				android:id="@+id/tvAppBarTitle"
+				android:text="@string/home_title"
+				android:layout_width="wrap_content"
+				android:layout_toEndOf="@id/btnBack"
+				android:textColor="@android:color/black"
+				android:textStyle="bold"
+				android:fontFamily="@font/carmen_sans"
+				android:layout_alignBottom="@id/btnBack"
+				android:layout_marginStart="@dimen/margin_medium_3"
+				android:textSize="@dimen/text_regular_2x"
+				android:layout_marginBottom="@dimen/margin_smaller"
+				android:layout_height="wrap_content"/>
+
+			<TextView
+				android:id="@+id/tvStatus"
+				android:layout_width="wrap_content"
+				android:layout_alignBaseline="@id/tvAppBarTitle"
+				android:layout_alignParentEnd="true"
+				android:text="@string/in_progress_status"
+				android:textColor="@color/color_full_white"
+				android:textStyle="bold"
+				android:paddingStart="@dimen/margin_medium_3"
+				android:paddingEnd="@dimen/margin_medium_3"
+				android:fontFamily="@font/carmen_sans"
+				android:paddingTop="@dimen/margin_small"
+				android:paddingBottom="@dimen/margin_medium"
+				android:layout_marginEnd="@dimen/margin_large"
+				android:background="@drawable/button_background"
+				android:layout_height="wrap_content"/>
+
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/tvTitle"
+			android:layout_width="wrap_content"
+			android:layout_below="@id/rlAppBar"
+			android:layout_marginStart="@dimen/margin_medium_3"
+			android:layout_marginTop="@dimen/margin_medium_2"
+			android:textSize="@dimen/text_heading_2x"
+			android:fontFamily="@font/carmen_sans_bold"
+			android:textColor="@android:color/black"
+			android:textStyle="bold"
+			android:text="Create additional \npages"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:id="@+id/tvDays"
+			android:layout_width="wrap_content"
+			android:layout_below="@id/tvTitle"
+			android:layout_marginTop="@dimen/margin_medium_2"
+			android:layout_marginStart="@dimen/margin_medium_3"
+			android:text="03 days  |  Dec 18 2019"
+			style="@style/GrayText"
+			android:layout_height="wrap_content"/>
+
+		<include
+			android:id="@+id/vpPeopleAndProgress"
+			android:layout_below="@id/tvDays"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			layout="@layout/view_pod_people_and_progress"/>
+
+		<RelativeLayout
+			android:id="@+id/rlTask"
+			android:layout_below="@id/vpPeopleAndProgress"
+			android:layout_marginTop="@dimen/margin_medium_3"
+			android:layout_width="match_parent"
+			android:background="@drawable/task_background"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:id="@+id/rlTaskTitles"
+				android:orientation="horizontal"
+				android:baselineAligned="true"
+				android:weightSum="4"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<TextView
+					android:id="@+id/tvData"
+					android:layout_marginTop="@dimen/margin_medium_2"
+					android:text="Data"
+					android:layout_weight="1.0"
+					android:gravity="start"
+					android:layout_marginStart="@dimen/margin_medium_3"
+					style="@style/GrayText"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"/>
+
+				<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_weight="3"
+					android:layout_marginTop="@dimen/margin_medium_2"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/tvTask"
+						android:layout_width="wrap_content"
+						style="@style/GrayText"
+						android:text="Tasks"
+						android:layout_height="wrap_content"/>
+
+					<TextView
+						android:id="@+id/tvShowInDays"
+						android:layout_width="wrap_content"
+						android:layout_alignBaseline="@id/tvTask"
+						android:text="Show In Days"
+						android:layout_toStartOf="@id/btnDropDown"
+						style="@style/GrayText"
+						android:layout_marginEnd="@dimen/margin_smaller"
+						android:layout_height="wrap_content" />
+
+					<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/btnDropDown"
+						android:layout_width="@dimen/margin_large"
+						android:layout_alignParentEnd="true"
+						android:layout_marginEnd="@dimen/margin_medium_2"
+						android:layout_marginBottom="@dimen/margin_small_n"
+						app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+						android:layout_alignBottom="@id/tvShowInDays"
+						android:layout_height="@dimen/margin_large"/>
+
+				</RelativeLayout>
+
+
+			</LinearLayout>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rvTasks"
+				android:layout_width="match_parent"
+				android:layout_below="@id/rlTaskTitles"
+				android:layout_marginTop="@dimen/margin_medium_2"
+				android:layout_height="match_parent"/>
+
+
+		</RelativeLayout>
+
+
+	</RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

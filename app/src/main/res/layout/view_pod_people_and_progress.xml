@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zg.ccp.customviewassignment.viewpods.PeopleAndProgressViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zg.ccp.customviewassignment.components.RoundedCornerImageView
+        android:id="@+id/ivPersonOne"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/success_kid" />
+
+    <com.zg.ccp.customviewassignment.components.RoundedCornerImageView
+        android:id="@+id/ivPersonTwo"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignTop="@id/ivPersonOne"
+        android:layout_marginStart="@dimen/margin_medium_n"
+        android:layout_toEndOf="@id/ivPersonOne"
+        app:srcCompat="@drawable/success_kid" />
+
+    <com.zg.ccp.customviewassignment.components.RoundedCornerImageView
+        android:id="@+id/ivPersonThree"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignTop="@id/ivPersonOne"
+        android:layout_marginStart="@dimen/margin_medium_n"
+        android:layout_toEndOf="@id/ivPersonTwo"
+        app:srcCompat="@drawable/success_kid" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnPlus"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignTop="@id/ivPersonOne"
+        android:layout_marginStart="@dimen/margin_medium_n"
+        android:padding="@dimen/margin_medium"
+        android:layout_toEndOf="@id/ivPersonThree"
+        android:background="@drawable/circle_button"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <com.zg.ccp.customviewassignment.components.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignTop="@id/ivPersonOne"
+        app:text_color="@color/colorAccent"
+        app:stroke_width="3dp"
+        app:sweep_angle="90dp"
+        app:progress_color="@color/colorAccent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3" />
+
+</com.zg.ccp.customviewassignment.viewpods.PeopleAndProgressViewPod>

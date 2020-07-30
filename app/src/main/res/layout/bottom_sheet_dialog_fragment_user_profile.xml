@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:id="@+id/btnDismiss"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@drawable/circle_button"
+        android:elevation="@dimen/margin_small"
+        android:src="@drawable/ic_baseline_close_24" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/viewTransparant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_transparant_view_top" />
+
+        <com.zg.ccp.customviewassignment.components.RoundedCornerImageView
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
+            android:layout_alignTop="@id/clProfileInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/negative_margin_profile_photo"
+            android:elevation="@dimen/margin_small"
+            android:src="@drawable/success_kid"
+            app:border_width="@dimen/margin_medium" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/viewTransparant"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/background_profile">
+
+            <TextView
+                android:id="@+id/tvClosedTasks"
+                style="@style/GrayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Closed Tasks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvOpenTasks"
+                style="@style/GrayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Open Tasks"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNumberOfOpenTasks"
+                style="@style/BlackBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="361"
+                app:layout_constraintEnd_toEndOf="@+id/tvClosedTasks"
+                app:layout_constraintStart_toStartOf="@+id/tvClosedTasks"
+                app:layout_constraintTop_toBottomOf="@+id/tvClosedTasks" />
+
+            <TextView
+                android:id="@+id/tvNumberOfOpenTasks2"
+                style="@style/BlackBoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="3"
+                app:layout_constraintEnd_toEndOf="@+id/tvOpenTasks"
+                app:layout_constraintStart_toStartOf="@+id/tvOpenTasks"
+                app:layout_constraintTop_toBottomOf="@+id/tvOpenTasks" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="Zachary Butler"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_heading_1x"
+                android:fontFamily="@font/carmen_sans_bold"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSpeciality"
+                style="@style/GrayText.Regular2X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="UI Designer"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_message"
+                android:paddingStart="@dimen/margin_xxlarge"
+                android:paddingTop="@dimen/margin_medium"
+                android:fontFamily="@font/carmen_sans_bold"
+                android:paddingEnd="@dimen/margin_xxlarge"
+                android:paddingBottom="@dimen/margin_medium"
+                android:text="Message"
+                android:textColor="@color/color_full_white"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvSpeciality" />
+
+            <ImageButton
+                android:id="@+id/btnShared"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_share"
+                app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+                app:layout_constraintEnd_toStartOf="@+id/btnMessage"
+                app:layout_constraintTop_toTopOf="@+id/btnMessage"
+                app:srcCompat="@drawable/ic_baseline_share_24" />
+
+            <ImageButton
+                android:id="@+id/btnFinished"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/background_share"
+                app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+                app:layout_constraintStart_toEndOf="@+id/btnMessage"
+                app:layout_constraintTop_toTopOf="@+id/btnMessage"
+                app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMessage"
+                app:tabIndicatorColor="@color/message_color"
+                app:tabSelectedTextColor="@android:color/black">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerProfile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayoutProfile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

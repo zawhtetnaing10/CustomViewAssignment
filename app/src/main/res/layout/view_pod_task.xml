@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zg.ccp.customviewassignment.viewpods.TaskViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/margin_card_medium_2"
+    app:cardElevation="@dimen/margin_small">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="In Progress"
+            android:fontFamily="@font/carmen_sans"
+            android:textColor="@color/progress_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvType"
+            style="@style/GrayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvProgress"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:text="#Design" />
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            style="@style/BlackBoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProgress"
+            android:fontFamily="@font/carmen_sans"
+            android:layout_alignStart="@id/tvProgress"
+            android:layout_marginTop="@dimen/margin_card_medium_2"
+            android:text="Contact Page" />
+
+        <FrameLayout
+            android:id="@+id/flChat"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvTaskTitle"
+            android:layout_alignStart="@id/tvTaskTitle"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMessage"
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    app:srcCompat="@drawable/ic_baseline_chat_24" />
+
+                <TextView
+                    android:id="@+id/tvChatNumber"
+                    style="@style/BlackBoldText.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivMessage"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_toEndOf="@id/ivMessage"
+                    android:text="24" />
+
+            </RelativeLayout>
+            
+            <View
+                android:elevation="@dimen/margin_smaller"
+                android:layout_width="@dimen/margin_small"
+                android:layout_gravity="top|right"
+                android:visibility="gone"
+                android:background="@drawable/red_circle_background_without_stroke"
+                android:layout_height="@dimen/margin_small"/>
+            
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvTaskTitle"
+            android:id="@+id/flFile"
+            android:layout_toEndOf="@id/flChat"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAttach"
+                    android:layout_width="@dimen/margin_large"
+                    android:layout_height="@dimen/margin_large"
+                    app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+                <TextView
+                    android:id="@+id/tvFileAttachedNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@id/ivAttach"
+                    android:layout_alignTop="@id/ivAttach"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="24"
+                    style="@style/BlackBoldText.Small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <View
+                android:elevation="@dimen/margin_smaller"
+                android:layout_width="@dimen/margin_small"
+                android:layout_gravity="top|right"
+                android:background="@drawable/red_circle_background_without_stroke"
+                android:layout_height="@dimen/margin_small"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No 163"
+            android:layout_toStartOf="@id/ivPerson"
+            android:layout_marginBottom="@dimen/margin_smaller"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:fontFamily="@font/carmen_sans_bold"
+            android:layout_alignBottom="@id/flChat"
+            style="@style/BlackBoldText.Small"/>
+        
+        <com.zg.ccp.customviewassignment.components.RoundedCornerImageView
+            android:id="@+id/ivPerson"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/flChat"
+            android:layout_marginTop="@dimen/margin_small_n"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            app:srcCompat="@drawable/success_kid"
+            android:layout_height="@dimen/margin_xlarge"/>
+        
+    </RelativeLayout>
+
+
+</com.zg.ccp.customviewassignment.viewpods.TaskViewPod>

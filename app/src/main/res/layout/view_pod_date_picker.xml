@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/create_new_task_color"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDate"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:src="@drawable/ic_baseline_date_range_24" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:textColor="@color/color_full_white"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Dec 24, 2019"
+        android:layout_toEndOf="@id/ivDate"
+        android:fontFamily="@font/carmen_sans_bold"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnDropDownDate"
+        app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+        android:layout_toEndOf="@id/tvDate"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvDate"
+        android:background="@color/create_new_task_hint_color"
+        android:layout_marginTop="@dimen/text_small"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressBar">
+        <attr name="text_color" format="color"/>
+        <attr name="progress_color" format="color"/>
+        <attr name="sweep_angle" format="dimension"/>
+        <attr name="stroke_width" format="dimension"/>
+    </declare-styleable>
+</resources>

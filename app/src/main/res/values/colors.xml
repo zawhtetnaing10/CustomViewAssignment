@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#DDFF5722</color>
+	<color name="colorPrimaryDark">#5cb773</color>
+	<color name="colorAccent">#DDFF5722</color>
+	<color name="color_full_white">#ffffff</color>
+	<color name="colorTextPrimary">#414141</color>
+	<color name="color_active">#8BC34A</color>
+
+
+	<color name="color_task_background">#F0F3FB</color>
+	<color name="progress_color">#E37B64</color>
+	<color name="transparant_color">#A000</color>
+	<color name="message_color">#5F9F9E</color>
+	<color name="create_new_task_color">#33354C</color>
+	<color name="create_new_task_hint_color">#626374</color>
+</resources>

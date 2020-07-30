@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CustomViewAssignment</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="home_title">OMP Dashboard</string>
+    <string name="in_progress_status">In progress</string>
+    <string name="project_tasks">Project Tasks</string>
+    <string name="contacts">Contacts</string>
+    <string name="about_you">About you</string>
+    <string name="create_new_task_button">Create Task</string>
+    <string name="save">Save</string>
+    <string name="client">Client</string>
+    <string name="project_name">PROJECT NAME</string>
+    <string name="project_date">PROJECT DATE</string>
+    <string name="asignee">ASIGNEE</string>
+    <string name="category">Category</string>
+    <string name="create_new_task">Create New Task</string>
+</resources>
